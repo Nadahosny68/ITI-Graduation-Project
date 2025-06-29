@@ -89,6 +89,9 @@ To support analytical dashboards in Power BI, a **Star Schema** was designed:
 
 Views were created in SQL to simulate fact/dimension tables and loaded into Power BI.
 
+![WhatsApp Image 2025-06-24 at 01 48 09_73204742](https://github.com/user-attachments/assets/86ac3103-ac99-4cc7-a602-2d3ebd8c7b68)
+
+
 ## 📊 SSRS Reporting
 
 In addition to Power BI dashboards, I built over **6 SSRS reports** using stored procedures. These include:
@@ -99,6 +102,9 @@ In addition to Power BI dashboards, I built over **6 SSRS reports** using stored
 * Course-topic mapping report
 * Report listing **exam questions and choices**
 * Report that shows **student answers per exam** (freeform layout)
+
+  ![WhatsApp Image 2025-06-10 at 20 57 43_17cb2ca5](https://github.com/user-attachments/assets/efff5764-211a-4527-87ef-799807e3b0fd)
+
 
 ## 🔢 4. Key DAX Measures
 
