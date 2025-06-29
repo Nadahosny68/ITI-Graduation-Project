@@ -1,7 +1,6 @@
 # ITI-Graduation-Project | Examination System 
 
 ![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/Girl%20developer%20developed%20code.mp4)
-![Demo of feature X](Girl developer developed code.mp4)
 
 
 
