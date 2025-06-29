@@ -1,10 +1,7 @@
 # ITI-Graduation-Project | Examination System 
 
-![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/Sql-ezgif.com-resize.gif)  
-
-
 <p align="center">
-  <img src="[https://raw.githubusercontent.com/Nadahosny68/GIF/main/Girl%20developer%20developed%20code.gif](https://github.com/Nadahosny68/GIF/blob/main/Sql-ezgif.com-resize.gif)" >
+  <img src="https://raw.githubusercontent.com/Nadahosny68/GIF/main/Sql-ezgif.com-resize.gif" alt="SQL Database Animation">
 </p>
 
 ## 🔧 Overview
