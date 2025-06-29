@@ -30,6 +30,10 @@ Relationships:
 
 > ✅ All foreign key constraints, cascading updates, and triggers were implemented to maintain referential integrity.
 
+![image](https://github.com/user-attachments/assets/200864bb-8d28-4f20-9509-46febfd74f19)
+
+![image](https://github.com/user-attachments/assets/f94f23a9-034e-4df4-b2a4-debc7bed5a2a)
+
 ## 📂 2. Database Creation & Population
 
 ### SQL Implementation
@@ -40,6 +44,9 @@ A full schema was written in SQL to:
 * Define relationships
 * Apply constraints and triggers
 * Drop/rebuild certain elements (e.g., Certificate columns, duplicate Topic table)
+
+  
+
 
 ### Data Generation
 
@@ -223,6 +230,7 @@ AVERAGEX(
 
 ## 💾 Technologies Used
 
+*DrowIO 
 * SQL Server (2019+)
 * DAX / Power BI Desktop
 * SSRS (SQL Server Reporting Services)
