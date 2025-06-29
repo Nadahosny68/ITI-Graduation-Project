@@ -89,7 +89,7 @@ To support analytical dashboards in Power BI, a **Star Schema** was designed:
 
 Views were created in SQL to simulate fact/dimension tables and loaded into Power BI.
 
-![WhatsApp Image 2025-06-24 at 01 48 09_73204742](https://github.com/user-attachments/assets/86ac3103-ac99-4cc7-a602-2d3ebd8c7b68)
+![WhatsApp Image 2025-06-29 at 20 11 15_3d1313ad](https://github.com/user-attachments/assets/b441dc6b-1c03-4cef-99dd-732c85ee4d5f)
 
 
 ## 📊 SSRS Reporting
