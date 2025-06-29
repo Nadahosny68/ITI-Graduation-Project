@@ -217,10 +217,10 @@ AVERAGEX(
 | Phase  | Description              | Tool             |
 | ------ | ------------------------ | ---------------- |
 | Week 1 | Database Design & ERD    | SQL Server       |
-| Week 2 | Data Creation & Triggers | SQL Server       |
-| Week 3 | Dimensional Modelling    | SQL Views        |
-| Week 4 | Power BI Integration     | Power BI Desktop |
-| Week 5 | Dashboard Development    | Power BI + DAX   |
+| Week 1 | Data Creation & Triggers | SQL Server       |
+| Week 2 | Dimensional Modelling    | SQL Views        |
+| Week 2 | Power BI Integration     | Power BI Desktop |
+| Week 2 | Dashboard Development    | Power BI + DAX   |
 
 ## 💾 Technologies Used
 
@@ -236,5 +236,5 @@ This project was built with learning and deployment in mind. For questions, reac
 
 ---
 
-**Author**: \Nada Hosny
+**Author**: Nada Hosny
 
