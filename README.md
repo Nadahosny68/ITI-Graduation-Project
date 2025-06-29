@@ -1,0 +1,240 @@
+# ITI-Graduation-Project
+# Examination System Project Documentation
+
+## 🔧 Overview
+
+This project is an end-to-end **Examination System** built using SQL Server and visualized in **Power BI**, designed to track and analyze student progress, skill readiness, certifications, job placements, and employer feedback. It serves both educational institutions and HR departments with actionable dashboards and KPIs.
+
+> 👤 **HR-Focused Contribution:** This repository documents my dedicated work on the **HR-related dashboards**, where I created a specialized **HR Data Mart** using SSIS to extract and load data from the transactional database. My contribution was scoped to the HR user perspective, involving hiring metrics, student-job matching, certification impact, and employer satisfaction. I also worked extensively with stored procedures and SSRS to support reporting.
+
+## 🏛️ 1. Database Design
+
+### 📊 Entity Relationship Diagram (ERD)
+
+The database was designed based on a real-world training and examination system. Major entities include:
+
+* **Student**
+* **Instructor**
+* **Course**
+* **Track**
+* **Exam**
+* **Question & Choice**
+* **Certificate**
+* **Job Placement**
+* **Company & Department**
+
+Relationships:
+
+* A student belongs to a track and can earn certificates.
+* Exams are linked to courses, and questions are linked to exams.
+* Students can be placed in jobs through companies.
+
+> ✅ All foreign key constraints, cascading updates, and triggers were implemented to maintain referential integrity.
+
+## 📂 2. Database Creation & Population
+
+### SQL Implementation
+
+A full schema was written in SQL to:
+
+* Create tables
+* Define relationships
+* Apply constraints and triggers
+* Drop/rebuild certain elements (e.g., Certificate columns, duplicate Topic table)
+
+### Data Generation
+
+Mock data was generated for each table:
+
+* `StudentSkills`, `Job`, `StudentCertificate`, `StudentAnswer`, `StudentEnrollment`, `StudentExam` were populated with sample data.
+* `Certificate` table was altered to reflect real-world formats (name and URL instead of filepath).
+
+### 🛠️ Stored Procedures Used
+
+* CRUD Procedures for all tables (Insert, Update, Delete, Select)
+* `ExamGeneration`: Automatically creates an exam per course
+* `ExamAnswers`: Saves student answers per exam
+* `ExamCorrection`: Calculates student grades based on answers
+
+## 📤 SSIS Data Transfer
+
+To support HR-focused dashboards, I used **SQL Server Integration Services (SSIS)** to migrate data from the transactional examination system to a curated **HR Data Mart**. This enabled clean, role-specific reporting in Power BI.
+
+## 📈 3. Dimensional Modelling
+
+To support analytical dashboards in Power BI, a **Star Schema** was designed:
+
+### ✨ Fact Tables:
+
+* `FactStudentPerformance` (joins exams, grades, certifications, skills)
+* `FactJobPlacement` (student-job-company mapping)
+* `FactCertificationProgress` (completion status, grade, issue date)
+
+### 📋 Dimension Tables:
+
+* `DimStudent`
+* `DimTrack`
+* `DimCourse`
+* `DimSkill`
+* `DimCertificate`
+* `DimJob`
+* `DimCompany`
+* `DimInstructor`
+
+Views were created in SQL to simulate fact/dimension tables and loaded into Power BI.
+
+## 📊 SSRS Reporting
+
+In addition to Power BI dashboards, I built over **6 SSRS reports** using stored procedures. These include:
+
+* Report showing **student info by Department No** (parameterized)
+* Report returning **student grades across all courses**
+* Instructor report showing **courses taught and student counts**
+* Course-topic mapping report
+* Report listing **exam questions and choices**
+* Report that shows **student answers per exam** (freeform layout)
+
+## 🔢 4. Key DAX Measures
+
+### Student Performance:
+
+```dax
+Skill Match % =
+VAR SkillsAssigned = CALCULATE(DISTINCTCOUNT('StudentSkills'[SkillsText]))
+RETURN DIVIDE(SkillsAssigned, 10) * 100
+```
+
+### Hiring Metrics:
+
+```dax
+Hired Count =
+CALCULATE(
+    DISTINCTCOUNT('Student'[StudentID]),
+    FILTER('Job', 'Job'[Status] = "Hired")
+)
+```
+
+### Certification Metrics:
+
+```dax
+Avg Cert Score =
+AVERAGEX(
+    'StudentCertificate',
+    SWITCH([Grade], "A", 4, "B", 3, "C", 2, "D", 1, 0)
+)
+```
+
+### Readiness Funnel:
+
+```dax
+Completion % =
+DIVIDE(
+    COUNTROWS(FILTER('StCertificationProgress', [Status] = "Completed")),
+    COUNTROWS(VALUES('Student'[StudentID]))
+)
+```
+
+### Recovery:
+
+```dax
+Avg Time to Recovery =
+AVERAGEX(
+    FILTER('StudentFlags', NOT(ISBLANK([FlagDate])) && NOT(ISBLANK([RecoveryDate]))),
+    DATEDIFF([FlagDate], [RecoveryDate], DAY)
+)
+```
+
+## 🔄 5. Power BI Dashboarding
+
+### Dashboards Created (HR Scope):
+
+#### 1. **Student Resume Snapshot**
+
+* Table: Skills, Certifications
+* Cards: Readiness Score
+* Measures: `Skill Match %`, `Cert Count`
+
+#### 2. **Top Talent Pipeline**
+
+* Stacked Bar: Certifications per Student
+* KPI Card: Readiness %
+* Table: Students with High Scores
+
+#### 3. **Certification Completion Tracker**
+
+* Pie: Completed vs Incomplete
+* Table: Per Student Completion
+* Measure: `Completion %`
+
+#### 4. **Interview Practice Tracker**
+
+* Line Chart: Score Over Time
+* Table: Missed Topics
+* Measure: Readiness Trend
+
+#### 5. **Employer Satisfaction Dashboard**
+
+* Likert Bar: Feedback Scores
+* Column: Repeat Hiring
+* Table: Employer Feedback by Student
+
+#### 6. **Job Readiness Drop-off**
+
+* Funnel Chart: Enrolled → Certified → Hired
+* Table: Drop-off Reasons
+* Cards: `% Readiness Drop`, `Rescued Students`
+
+#### 7. **Student-Job Match AI Helper**
+
+* Gauge: `Skill Match %`
+* Table: Candidate Match Score by Job
+
+#### 8. **Track vs ROI Dashboard**
+
+* Line: Hires per Track
+* Column: Avg Salary
+* Cards: `ROI %`, `Avg Placement Cost`
+
+## 🏦 6. Best Practices Followed
+
+* ✅ Used **views** in SQL to simulate star schema and avoid affecting OLTP tables
+* ✅ Used **measures** (not calculated columns) in Power BI for flexibility and performance
+* ✅ Ensured **relationships** were clean with single-direction filtering
+* ✅ Modular and scalable model with room for advanced metrics (AI Matching, NLP Feedback)
+
+## 🎓 7. Learnings & Outcomes
+
+* Built and deployed a clean **HR data mart** tailored for hiring and placement insights
+* Practiced advanced DAX: conditional metrics, dynamic KPIs
+* Delivered 8+ HR dashboards integrated with SSRS reporting
+* Worked with SSIS to support ETL automation
+* Documented and versioned the system in GitHub for portability and collaboration
+
+---
+
+## 📅 Timeline
+
+| Phase  | Description              | Tool             |
+| ------ | ------------------------ | ---------------- |
+| Week 1 | Database Design & ERD    | SQL Server       |
+| Week 2 | Data Creation & Triggers | SQL Server       |
+| Week 3 | Dimensional Modelling    | SQL Views        |
+| Week 4 | Power BI Integration     | Power BI Desktop |
+| Week 5 | Dashboard Development    | Power BI + DAX   |
+
+## 💾 Technologies Used
+
+* SQL Server (2019+)
+* DAX / Power BI Desktop
+* SSRS (SQL Server Reporting Services)
+* SSIS (Integration Services)
+* GitHub (for versioning & README)
+
+## 🌟 Credits
+
+This project was built with learning and deployment in mind. For questions, reach out or raise issues in the GitHub repository.
+
+---
+
+**Author**: \Nada Hosny
+
