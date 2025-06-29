@@ -1,5 +1,7 @@
 # ITI-Graduation-Project | Examination System 
 
+![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/Girl%20developer%20developed%20code.mp4)
+
 ## 🔧 Overview
 
 This project is an end-to-end **Examination System** built using SQL Server and visualized in **Power BI**, designed to track and analyze student progress, skill readiness, certifications, job placements, and employer feedback. It serves both educational institutions and HR departments with actionable dashboards and KPIs.
