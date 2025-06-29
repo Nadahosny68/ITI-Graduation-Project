@@ -1,5 +1,7 @@
 # ITI-Graduation-Project | Examination System 
 
+![image](https://github.com/user-attachments/assets/c7adb887-c2a3-41ce-bf49-7be5afd4e8f6)
+
 ## 🔧 Overview
 
 This project is an end-to-end **Examination System** built using SQL Server and visualized in **Power BI**, designed to track and analyze student progress, skill readiness, certifications, job placements, and employer feedback. It serves both educational institutions and HR departments with actionable dashboards and KPIs.
@@ -158,7 +160,7 @@ AVERAGEX(
 
 ## 🔄 5. Power BI Dashboarding
 
-### Dashboards Created (HR Scope):
+### Glimpse of the Dashboards Created (HR Scope):
 
 #### 1. **Student Resume Snapshot**
 
@@ -236,7 +238,8 @@ AVERAGEX(
 
 ## 💾 Technologies Used
 
-*DrowIO 
+
+* Draw.io
 * SQL Server (2019+)
 * DAX / Power BI Desktop
 * SSRS (SQL Server Reporting Services)
