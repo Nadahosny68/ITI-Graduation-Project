@@ -1,7 +1,8 @@
 # ITI-Graduation-Project | Examination System 
 
-[![image](https://github.com/user-attachments/assets/c7adb887-c2a3-41ce-bf49-7be5afd4e8f6)
-](https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F15215756-Coding-Animation-Concept&psig=AOvVaw0j5A5sw45pSvh9JkUqIuxv&ust=1751303873811000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDTwr6Rl44DFQAAAAAdAAAAABAV)
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Fshots%2F15215756-Coding-Animation-Concept&psig=AOvVaw0j5A5sw45pSvh9JkUqIuxv&ust=1751303873811000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDTwr6Rl44DFQAAAAAdAAAAABAV
+
+
 ## 🔧 Overview
 
 This project is an end-to-end **Examination System** built using SQL Server and visualized in **Power BI**, designed to track and analyze student progress, skill readiness, certifications, job placements, and employer feedback. It serves both educational institutions and HR departments with actionable dashboards and KPIs.
