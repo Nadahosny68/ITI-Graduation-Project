@@ -1,5 +1,4 @@
-# ITI-Graduation-Project
-# Examination System Project Documentation
+# ITI-Graduation-Project | Examination System 
 
 ## 🔧 Overview
 
