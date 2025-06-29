@@ -80,9 +80,7 @@ To support analytical dashboards in Power BI, a **Star Schema** was designed:
 
 ### ✨ Fact Tables:
 
-* `FactStudentPerformance` (joins exams, grades, certifications, skills)
-* `FactJobPlacement` (student-job-company mapping)
-* `FactCertificationProgress` (completion status, grade, issue date)
+* `FactStudentPerformance` ( grades, certifications, skills, job-company mapping, Interviews, completion status, certifications grade, certifications issue date)
 
 ### 📋 Dimension Tables:
 
@@ -93,11 +91,10 @@ To support analytical dashboards in Power BI, a **Star Schema** was designed:
 * `DimCertificate`
 * `DimJob`
 * `DimCompany`
-* `DimInstructor`
 
 Views were created in SQL to simulate fact/dimension tables and loaded into Power BI.
 
-![WhatsApp Image 2025-06-29 at 20 11 15_3d1313ad](https://github.com/user-attachments/assets/b441dc6b-1c03-4cef-99dd-732c85ee4d5f)
+![WhatsApp Image 2025-06-24 at 01 46 14_cb9a232f](https://github.com/user-attachments/assets/d085493b-2b6b-4105-9fdd-3c29ea3a2729)
 
 
 ## 📊 SSRS Reporting
@@ -112,7 +109,6 @@ In addition to Power BI dashboards, I built over **6 SSRS reports** using stored
 * Report that shows **student answers per exam** (freeform layout)
 
   ![WhatsApp Image 2025-06-10 at 20 57 43_17cb2ca5](https://github.com/user-attachments/assets/efff5764-211a-4527-87ef-799807e3b0fd)
-
 
 ## 🔢 4. Key DAX Measures
 
@@ -167,6 +163,8 @@ AVERAGEX(
 ## 🔄 5. Power BI Dashboarding
 
 ### Glimpse of the Dashboards Created (HR Scope):
+
+![WhatsApp Image 2025-06-29 at 20 11 15_3d1313ad](https://github.com/user-attachments/assets/b441dc6b-1c03-4cef-99dd-732c85ee4d5f)
 
 #### 1. **Student Resume Snapshot**
 
