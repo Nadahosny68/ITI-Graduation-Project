@@ -1,6 +1,6 @@
 # ITI-Graduation-Project | Examination System 
 
-![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/Sql-ezgif.com-resize.gif)           ![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/SQLCode-ezgif.com-resize.gif)
+![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/Sql-ezgif.com-resize.gif)           
 
 ## 🔧 Overview
 
@@ -58,6 +58,8 @@ Mock data was generated for each table:
 * `Certificate` table was altered to reflect real-world formats (name and URL instead of filepath).
 
 ### 🛠️ Stored Procedures Used
+
+![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/SQLCode-ezgif.com-resize.gif)
 
 * CRUD Procedures for all tables (Insert, Update, Delete, Select)
 * `ExamGeneration`: Automatically creates an exam per course
