@@ -61,7 +61,9 @@ Mock data was generated for each table:
 
 ### 🛠️ Stored Procedures Used
 
-![Demo of feature X](https://github.com/Nadahosny68/GIF/blob/main/SQLCode-ezgif.com-resize.gif)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nadahosny68/GIF/main/SQLCode-ezgif.com-resize.gif" alt="SQL Code Animation">
+</p>
 
 * CRUD Procedures for all tables (Insert, Update, Delete, Select)
 * `ExamGeneration`: Automatically creates an exam per course
