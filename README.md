@@ -117,7 +117,9 @@ To support HR-focused dashboards, I used **SQL Server Integration Services (SSIS
 
 ### Glimpse of the Dashboards Created (HR Scope):
 
-![WhatsApp Image 2025-06-29 at 20 11 15_3d1313ad](https://github.com/user-attachments/assets/b441dc6b-1c03-4cef-99dd-732c85ee4d5f)
+![image](https://github.com/user-attachments/assets/068b82b2-236a-49e3-8eba-692f823068ba)
+![image](https://github.com/user-attachments/assets/aeb83e0f-ae31-466f-8322-3cee3f7e4d68)
+
 
 #### 1. **Student Resume Snapshot**
 
