@@ -221,10 +221,10 @@ AVERAGEX(
 
 ## 🏦 7. Best Practices Followed
 
-* ✅ Used **views** in SQL to simulate star schema and avoid affecting OLTP tables
-* ✅ Used **measures** (not calculated columns) in Power BI for flexibility and performance
-* ✅ Ensured **relationships** were clean with single-direction filtering
-* ✅ Modular and scalable model with room for advanced metrics (AI Matching, NLP Feedback)
+✅ Used **views** in SQL to simulate star schema and avoid affecting OLTP tables
+✅ Used **measures** (not calculated columns) in Power BI for flexibility and performance
+✅ Ensured **relationships** were clean with single-direction filtering
+✅ Modular and scalable model with room for advanced metrics (AI Matching, NLP Feedback)
 
 ## 🎓 8. Learnings & Outcomes
 
